@@ -17,7 +17,7 @@
     "suggest": {
     },
     "autoload": {
-        "psr-4": { "DoctrineDbalUtil\\UrlMultiTaxonomy\\": "" }
+        "psr-4": { "DoctrineDbalUtil\\UrlMultiTaxonomy\\Schema\\": "" }
     },
     "extra": {
         "branch-alias": {
