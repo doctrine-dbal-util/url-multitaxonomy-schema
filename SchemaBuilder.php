@@ -1,11 +1,11 @@
 <?php
 
-namespace AppBundle\Model;
+namespace DoctrineDbalUtil\UrlMultiTaxonomy\Schema;
 
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Schema\Table;
 
-class UrlTables
+class SchemaBuilder
 {
     protected $schema;
 
