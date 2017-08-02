@@ -1,0 +1,28 @@
+{
+    "name": "doctrine-dbal-util/url-multitaxonomy-schema",
+    "description": "URL with Multitaxonomy: Doctrine DBAL Schema Builder",
+    "keywords": ["URL", "multitaxonomy", "dbal", "doctrine-dbal", "database-schema", "schema-builder", "snowyowl"],
+    "homepage": "https://github.com/doctrine-dbal-util/url-multitaxonomy-schema",
+    "license": "ISC",
+    "authors": [
+        {"name": "Jean-bernard Addor"},
+        {"name": "Community", "homepage": "https://github.com/doctrine-dbal-util/url-multitaxonomy-schema"}
+    ],
+    "require": {
+        "php": "^5.0",
+        "doctrine/dbal": "^2.5"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": { "PhpTaxonomy\\MultiTaxonomy\\Doctrine\\DBAL\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
+
