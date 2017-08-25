@@ -21,7 +21,7 @@ class SchemaBuilder
         $UrlTable->addColumn("uuid", "guid");
         $UrlTable->setPrimaryKey(["uuid"]);
         $UrlTable->addColumn("url", "string", ["length" => 1000, "customSchemaOptions" => ["unique" => true]]);
-        $UrlTable->addIndex(["url"], "url_url"); // Should not be useful, if uuid v5 are used.
+        // $UrlTable->addIndex(["url"], "url_url"); // Should not be useful, if uuid v5 are used.
         $UrlTable->addColumn("deleted", "datetime", ["notnull" => false]);
         return $UrlTable;
     }
