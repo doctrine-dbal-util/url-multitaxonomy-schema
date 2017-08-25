@@ -69,7 +69,7 @@ class SchemaBuilder
         return $OwnedUrlTable;
     }
     
-    function LinkUrlUser(Table $OwnedUrlTable, $UserTableName) {
+    function LinkUrlUser(Table $OwnedUrlTable, Table $User) {
         $LinkUrlUser = $this->schema->createTable("link_owned_url_user");
         // $LinkUrlUser->addColumn("id", "integer", ["autoincrement" => true]);
         $LinkUrlUser->addColumn("uuid", "guid"); // owned url encoded with the user uuid
@@ -80,7 +80,7 @@ class SchemaBuilder
         // $LinkUrlUser->addForeignKeyConstraint($OwnedUrlTable, ["url_id"], ["id"], [], "url_id_fk"); changed
         $LinkUrlUser->addColumn("user_uuid", "guid");
         $LinkUrlUser->addIndex(["user_uuid"], "link_owned_url_user_user");
-        $LinkUrlUser->addForeignKeyConstraint($UserTableName, ["user_uuid"], ["uuid"], ["onUpdate" => "CASCADE", "onDelete" => "CASCADE"], "user_uuid_fk");
+        $LinkUrlUser->addForeignKeyConstraint($User, ["user_uuid"], ["uuid"], ["onUpdate" => "CASCADE", "onDelete" => "CASCADE"], "user_uuid_fk");
         // $LinkUrlUser->addForeignKeyConstraint($UserTable, ["taxonomy_id"], ["id"], [], "taxonomy_id_fk");
         $LinkUrlUser->addUniqueIndex(["owned_url_uuid", "user_uuid"], "link_url_user_unique_url_user");
         //^ Optional constraint of unicity, but essential here for link_owned_url_user.
